@@ -34,8 +34,8 @@
       .row {
         flex-direction: column;
         gap: 24px;
-        width: 50%;
-        padding-top: 13%;
+        width: 60%;
+        padding-top: 12%;
         .sliderTitle {
           color: #fff;
           font-size: 50px;
@@ -71,7 +71,7 @@
     .carouselDots {
       width: 100%;
       position: absolute;
-      bottom: -110px;
+      bottom: -26%;
       text-align: center;
       .dot {
         display: inline-block;
@@ -89,5 +89,81 @@
   }
   //! OVERLAY END
 }
+
+//* RESPONSIVE HERO START
+@media (max-width: 1500px) {
+  .hero {
+    height: 100vh;
+    .container {
+      .row {
+        padding-top: 12%;
+      }
+    }
+
+    //* CAROUSEL DOTS START
+    .carouselDots {
+      top: 115%;
+    }
+    //* CAROUSEL DOTS END
+  }
+}
+
+@media (max-width: 960px) {
+  .hero {
+    //* CAROUSEL DOTS START
+    .carouselDots {
+      top: 105%;
+    }
+    //* CAROUSEL DOTS END
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    height: 100vh;
+    .container {
+      .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        width: 100%;
+        padding-top: 12%;
+      }
+    }
+
+    //* CAROUSEL DOTS START
+    .carouselDots {
+      top: 105%;
+    }
+    //* CAROUSEL DOTS END
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    height: 110vh;
+    .container {
+      .row {
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+        padding-top: 0;
+        .sliderTitle{
+          font-size: 30px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    //* CAROUSEL DOTS START
+    .carouselDots {
+      top: 105%;
+    }
+    //* CAROUSEL DOTS END
+  }
+}
+
+//* RESPONSIVE HERO END
 
 //? HERO END
