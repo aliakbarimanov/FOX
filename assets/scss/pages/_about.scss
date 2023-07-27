@@ -1,0 +1,138 @@
+@import "../mixins";
+
+// ENTRY SECTION START
+.entry {
+  width: 100%;
+  height: 300px;
+  position: relative;
+
+  background-image: url(../images/slider/1.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f1453d;
+    opacity: 0.3;
+  }
+
+  .row {
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .entryTitle {
+      color: #fff;
+      font-weight: 900;
+      font-size: 40px;
+      margin-bottom: 8px;
+    }
+
+    .breadCrumbs {
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+
+      a {
+        margin-right: 8px;
+        color: #fff;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+        &:last-child {
+          cursor: text;
+        }
+      }
+    }
+  }
+}
+// ENTRY SECTION END
+
+//? HISTORY SECTION START
+.history {
+  width: 100%;
+  .container {
+    padding: 0 15px;
+    .row {
+      gap: 10px;
+      
+      //* HISTORY INFO START
+      .historyInfo {
+        width: 60%;
+        padding: 48px 24px 48px 15px;
+
+        .historyTitle{
+          color: rgba(0, 0, 0, 0.8);
+          font-size: 32px;
+          font-weight: 500;
+          margin-bottom: 24px;
+        }
+        p{
+          color: $secondClr;
+          line-height: 1.8;
+          margin-bottom: 16px;
+        }
+      }
+      //* HISTORY INFO END
+
+      //! HISTORY RIGHT START
+      .historyRight {
+        width: 40%;
+        padding: 0 15px;
+
+        background-image: url(../images/home/about.webp);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+      //! HISTORY RIGHT END
+    }
+  }
+}
+
+// RESPONSIVE HISTORY START
+@media (max-width: 1200px){
+  .history {
+    .container {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .history {
+    .container {
+      width: 73%;
+      .row {
+        align-items: center;
+        .historyInfo {
+          width: 100%;
+        }
+        .historyRight {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 570px){
+  .history {
+    .container {
+      width: 100%;
+    }
+  }
+}
+// RESPONSIVE HISTORY END
+//? HISTORY SECTION END

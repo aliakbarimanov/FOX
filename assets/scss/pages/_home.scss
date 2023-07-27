@@ -639,11 +639,13 @@
   .coursesBox {
     width: 100%;
     .row {
+      flex-wrap: wrap;
+
       //? COURSES CARDS START
       .courseCard {
         width: 25%;
         padding: 0 15px;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         .cardImg {
           height: 300px;
           img {
@@ -705,6 +707,7 @@
     .coursesBox {
       .row {
         .courseCard {
+          margin-bottom: 60px;
           .cardAbout {
             display: flex;
             flex-direction: column;
