@@ -51,3 +51,13 @@
   line-height: 1.8;
   margin-bottom: 22px;
 }
+
+
+//! MIXIN FOOTER BOX TITLE
+@mixin footerBoxTitle(){
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}

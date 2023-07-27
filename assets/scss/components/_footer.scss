@@ -1,0 +1,276 @@
+// ADD MIXIN
+@import "../mixins";
+
+// FOOTER START
+.footer {
+  width: 100%;
+  background-color: #232323;
+  padding: 96px 0;
+  .container {
+    padding: 0 15px;
+    .row {
+      flex-direction: column;
+
+      //? FOOTER TOP START
+      .footerTop {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 48px;
+
+        .footerBox {
+          width: 25%;
+          padding: 0 15px;
+        }
+
+        //* FOOTER QUESTION START
+        .footerQuestion {
+          display: flex;
+          flex-direction: column;
+
+          .questionTitle {
+            @include footerBoxTitle();
+          }
+
+          .contactList {
+            .contactItem {
+              margin-bottom: 15px;
+              a {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                i {
+                  color: #fff;
+                  font-size: 18px;
+                }
+                span {
+                  font-size: 14px;
+                  color: rgba(255, 255, 255, 0.7);
+                }
+              }
+            }
+          }
+        }
+        //* FOOTER QUESTION END
+
+        //! FOOTER BLOG START
+        .footerBlog {
+          display: flex;
+          flex-direction: column;
+
+          .blogTitle {
+            @include footerBoxTitle();
+          }
+          .footerBlogCard {
+            margin-bottom: 24px;
+            display: flex;
+            gap: 24px;
+
+            img {
+              width: 80px;
+              height: 80px;
+              object-fit: cover;
+            }
+            .footerBlogInfo {
+              display: flex;
+              flex-direction: column;
+              a {
+                color: rgba(255, 255, 255, 0.9);
+                margin-bottom: 8px;
+                transition: 0.3s all ease;
+                &:hover {
+                  color: $primaryClr;
+                }
+              }
+              .footerBlogDate {
+                margin-bottom: 8px;
+                display: flex;
+                align-items: center;
+
+                i {
+                  color: gray;
+                  font-size: 12px;
+                  margin-right: 8px;
+                }
+                span {
+                  color: gray;
+                  font-size: 12px;
+                }
+              }
+              .footerBlogComment {
+                display: flex;
+                align-items: center;
+
+                i {
+                  color: gray;
+                  font-size: 12px;
+                  margin-right: 8px;
+                }
+                span {
+                  color: gray;
+                  font-size: 12px;
+                  margin-right: 8px;
+                }
+              }
+            }
+          }
+        }
+        //! FOOTER BLOG END
+
+        //? FOOTER LINKS START
+        .footerLinks {
+          display: flex;
+          flex-direction: column;
+
+          .linksTitle {
+            @include footerBoxTitle();
+          }
+          .linksList {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+
+            .linksItem {
+              a {
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.7);
+                i {
+                  font-size: 9px;
+                  margin-right: 8px;
+                }
+              }
+            }
+          }
+        }
+        //? FOOTER LINKS END
+
+        //* FOOTER SUBSCRIBE START
+        .footerSubscribe {
+          display: flex;
+          flex-direction: column;
+
+          .subscribeTitle {
+            @include footerBoxTitle();
+          }
+          .subscribeForm {
+            margin-bottom: 48px;
+            input {
+              outline: none;
+              border: none;
+              width: 100%;
+              padding: 6px 12px;
+              margin-bottom: 8px;
+              font-size: 16px;
+              line-height: 2.5;
+              text-align: center;
+              background-color: rgba(255, 255, 255, 0.1);
+              color: rgba(255, 255, 255, 0.7);
+              &::placeholder {
+                color: rgba(255, 255, 255, 0.7);
+              }
+            }
+            button {
+              user-select: none;
+              font-size: 16px;
+              line-height: 2.5;
+              outline: none;
+              border: none;
+              width: 100%;
+              padding: 6px 12px;
+              color: #fff;
+              background-color: #5d50c6;
+              transition: all 0.3s ease;
+              &:hover {
+                background-color: $primaryClr;
+              }
+            }
+          }
+
+          .connectTitle {
+            @include footerBoxTitle();
+            margin-bottom: 20px;
+          }
+          .connectList {
+            display: flex;
+            .connectItem {
+              margin-right: 10px;
+              border-radius: 50%;
+              width: 40px;
+              height: 40px;
+              background-color: rgba(255, 255, 255, 0.05);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              a {
+                color: #fff;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+        //* FOOTER SUBSCRIBE END
+      }
+      //? FOOTER TOP END
+
+      //* FOOTER BOTTOM START
+      .footerBottom {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: center;
+      }
+      //* FOOTER BOTTOM END
+    }
+  }
+}
+
+//? FOOTER RESPONSIVE START
+@media (max-width: 1200px) {
+  .footer {
+    .container {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    .container {
+      width: 73%;
+      .row {
+        .footerTop {
+          .footerBox {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    .container {
+      .row {
+        .footerTop {
+          .footerBox {
+            width: 100%;
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    .container {
+      width: 95%;
+    }
+  }
+}
+//? FOOTER RESPONSIVE END
+
+// FOOTER END
